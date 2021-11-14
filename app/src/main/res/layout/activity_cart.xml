@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:background="@drawable/gradient_bg_scnd"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_store"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="CART ITEM"
+            android:textColor="#000080"
+            android:fontFamily="@font/choplin_medium"
+            android:layout_gravity="center_vertical"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="12"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panel2"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:background="#e7e7e7"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+        <TextView
+            android:id="@+id/txtTotal3"
+            android:text="Total Price:"
+            android:textColor="#000080"
+            android:fontFamily="@font/overlock_regular"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtTotal"
+            android:text=""
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/overlock_regular"
+            android:textSize="20dp"
+            android:textColor="#000080"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnPurchase"
+                android:visibility="gone"
+                android:layout_gravity="end|center_vertical"
+                style="@style/TextStylePurchase"
+                android:background="@drawable/round_button"
+                android:text="Purchase"
+                android:fontFamily="@font/casanova"
+                android:layout_width="90dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="40dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cart"
+        android:padding="8dp"
+        android:layout_below="@+id/panel"
+        android:layout_above="@+id/panel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

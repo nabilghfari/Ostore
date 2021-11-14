@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Opaku Store</string>
+    <string name="textTitle">OPAKU</string>
+    <string name="textSub1">Trusted Retail For Your Toddler</string>
+    <string name="textSub2">Register Your Account</string>
+    <string name="textExtra1">Forgot Password?</string>
+    <string name="textExtra2">Register</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
